@@ -1,0 +1,127 @@
+<ng-include src="'templates/header.html'"></ng-include>
+<div class="container">
+		<div class="card border border-dark">
+			<div class="card-block">
+				<h4 class="card-title align-center">Please Write Your Need</h4>
+				<form method="get" action="#">
+				  <div class="form-row">
+					<div class="form-group col-md-2">
+					  <label for="inputPlace">Place :</label>
+					</div>
+					<div class="form-group col-md-8">
+					  <input type="text" class="form-control" id="inputPlace" ng-model="inputPlace" placeholder="Enter Place..">
+					</div>
+				  </div>
+				  <div class="form-row">
+					<div class="form-group col-md-2">
+					  <label for="inputNeed">Need :</label>
+					</div>
+					<div class="form-group col-md-10">
+					  <textarea rows="5%" cols="60%" id="inputNeed" ng-model="inputNeed" placeholder="Enter Your Need.."></textarea>
+					</div>
+				  </div>
+				  <div class="form-row">
+					<div class="form-group col-md-2">
+					  <label for="inputPhone">Phone :</label>
+					</div>
+					<div class="form-group col-md-10">
+					  <input type="number" class="form-control" id="inputPhone" ng-model="inputPhone" placeholder="Enter Phone..">
+					</div>
+				  </div>
+				  <div class="form-row">
+					<div class="form-group col-md-2">
+					  <label for="inputPhoto">Photo :</label>
+					</div>
+					<div class="form-group col-md-10">
+					  <input type="file" class="form-control" id="inputPhoto" ng-model="inputPhoto" placeholder="Upload Photo..">
+					</div>
+				  </div>
+				  <div class="form-row">
+					<div class="form-group col-md-2">
+					  <label for="inputFiles">Upload Files :</label>
+					</div>
+					<div class="form-group col-md-10">
+					  <input type="file" class="form-control" id="inputFiles" ng-model="inputFiles" placeholder="Upload File..">
+					</div>
+				  </div>
+				  <div class="form-row">
+					<div class="form-group col-md-2">
+					  <label for="inputSPhotos">Upload Supporting Photos :</label>
+					</div>
+					<div class="form-group col-md-10">
+					  <input type="file" class="form-control" id="inputSPhotos" ng-model="inputSPhotos" placeholder="Upload Supporting Photos..">
+					</div>
+				  </div>
+				  <div class="form-row">
+					<div class="form-group col-md-2">
+					  <label for="inputCategory">Select Category :</label>
+					</div>
+					<div class="form-group col-md-10">
+					  <select id="inputCategory" ng-model="inputCategory" class="form-control">
+						<option selected>Choose...</option>
+						<option>Save Life</option>
+						<option>StartUp</option>
+						<option>Jobs</option>
+						<option>Electronics</option>
+						<option>Marriages</option>
+						<option>Houses &amp; Tolets</option>
+						<option>Constructions</option>
+						<option>Automotives</option>
+						<option>Furniture</option>
+						<option>Tours &amp; Travels</option>
+						<option>Gifts &amp; Greetings</option>
+						<option>Pets</option>
+					  </select>
+					</div>
+				  </div>
+				  <div class="form-row">
+					<div class="form-group col-md-2">
+					  <label for="inputSubCategory">Select Sub-Category :</label>
+					</div>
+					<div class="form-group col-md-10">
+					  <select id="inputSubCategory" ng-model="inputSubCategory" class="form-control">
+						<option selected>Choose...</option>
+						<option>Bride Groom</option>
+						<option>Bride</option>
+						<option>Convention Halls</option>
+						<option>Photography</option>
+						<option>House For Sale</option>
+						<option>House For Rent</option>
+						<option>Flat For Sale</option>
+						<option>Flat For Rent</option>
+						<option>Plot For Rent</option>
+						<option>Plot For Sale</option>
+						<option>PG Rooms</option>
+						<option>Builders</option>
+						<option>Request For Materials</option>
+						<option>All Bikes</option>
+						<option>Cars</option>
+						<option>Vans</option>
+						<option>Trucks</option>
+						<option>Earth Mover's</option>
+						<option>Services</option>
+						<option>Accessories</option>
+					  </select>
+					</div>
+				  </div>
+				  <div class="form-group">
+					<div class="form-check">
+					  <label class="form-check-label">
+						<input class="form-check-input" type="checkbox"> Check me out
+					  </label>
+					</div>
+				  </div>
+				  <div class="form-row">
+					<div class="form-group col-md-2">
+					 
+					</div>
+					<div class="form-group col-md-10">
+						<button type="reset" class="btn btn-default">Cancel</button>
+					 <button type="submit" class="btn btn-primary" ng-click="submit_need();">Submit</button>
+					</div>
+				  </div>
+				  
+				</form>
+			</div>
+		</div>
+	</div>

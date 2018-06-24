@@ -1,0 +1,11 @@
+{
+  "name": "pp_node",
+  "version": "1.0.0",
+  "description": "pp using Node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "parisa",
+  "license": "ISC"
+}
