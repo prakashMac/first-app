@@ -82,9 +82,10 @@ app.get('/',function(req,res){
 
 
 						/* Server Running Port  */
-app.listen(3000,function(){
-    console.log('Node server running @ http://localhost:3000');
-});
-// http.listen(process.env.PORT || 3000, function(){
-// 	console.log('listening on', http.address().port);
-//   });
+// app.listen(3000,function(){
+//     console.log('Node server running @ http://localhost:3000');
+// });
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
+	console.log('listening on', port);
+  });
