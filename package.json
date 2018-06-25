@@ -1,11 +1,29 @@
 {
   "name": "pp_node",
   "version": "1.0.0",
-  "description": "pp using Node",
+  "description": "pp_node",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node server.js",
+    "start": "node server.js"
   },
-  "author": "parisa",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prakashMac/first-app.git"
+  },
+  "author": "prakash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prakashMac/first-app/issues"
+  },
+  "homepage": "https://github.com/prakashMac/first-app#readme",
+  "dependencies": {
+    "angular": "^1.7.2",
+    "angular-cookies": "^1.7.2",
+    "angular-route": "^1.7.2",
+    "bootstrap": "^4.1.1",
+    "express": "^4.16.3",
+    "popper.js": "^1.14.3",
+    "tether": "^1.4.4"
+  }
 }

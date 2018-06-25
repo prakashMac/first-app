@@ -85,3 +85,6 @@ app.get('/',function(req,res){
 app.listen(3000,function(){
     console.log('Node server running @ http://localhost:3000');
 });
+// http.listen(process.env.PORT || 3000, function(){
+// 	console.log('listening on', http.address().port);
+//   });
