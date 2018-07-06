@@ -101,7 +101,7 @@ var getDataOfNeed=function(){
 //     //console.log($scope.startups);
 	$scope.startups=this.writeobj;
     $scope.$watch("startups",function(newValue,oldValue){
-     	console.log(newValue);
+     	//console.log(newValue);
      });
 // 	//console.log($scope.startups);
 // 	//return deffered.promise;

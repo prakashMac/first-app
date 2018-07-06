@@ -33,11 +33,21 @@
 	text-align:center;
 	color:#007bff;
 }
+.image-pad{
+  text-align: center;
+  padding-top: 10px;
+}
+.text-pad{
+  padding: 10px;
+}
 
 
 @media screen and (max-width: 767px) {
   .dropdown-menu > li {
     display: block;
+  }
+  .text-pad{
+    text-align: center;
   }
 }
 
