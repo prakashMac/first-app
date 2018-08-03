@@ -22,11 +22,15 @@ app.use('/styles',  express.static(__dirname + '/styles'));
 app.use('/controllers',  express.static(__dirname + '/controllers'));
 app.use('/templates',  express.static(__dirname + '/templates'));
 app.use('/images',  express.static(__dirname + '/images'));
+app.use(middleWareFunction);
 
 						/* Main Starting Route  */
 app.get('/',function(req,res){
     res.sendFile('index.html',{'root': __dirname + '/templates'});
 });
+function middleWareFunction(req,res) {
+    res.sendFile("index.html", { 'root': __dirname + '/templates'});
+}
 
 // app.get('/getData',function(req,res){
 // 	//console.log(req.body);

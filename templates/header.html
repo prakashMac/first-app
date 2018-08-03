@@ -1,6 +1,6 @@
-<header>
-        <nav class="top-nav" ng-controller="loginCtrl">
-          <ul class="nav nav-pills float-right">
+ <!--<header>
+         <nav class="top-nav" ng-controller="loginCtrl">
+         <ul class="nav nav-pills float-right">
       <li class="nav-item">
               <a class="nav-link" href="/"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a>
             </li>
@@ -13,9 +13,6 @@
                 <li><a class="dropdown-item top-nav-user" ng-click="logout();">Logout</a></li>
               </ul>
             </li>
-            <!--<li class="nav-item">
-              <a class="nav-link" data-toggle="modal" data-target="#myRegister" href="">Register</a>
-            </li>-->
             <li class="nav-item" ng-show="message==undefined">
               <a class="nav-link" data-toggle="modal" data-target="#write_need_modal" href=""><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp;Write <br><span style="font-size:14px;">Your Need</span></a>
             </li>
@@ -25,7 +22,7 @@
           </ul>
         </nav>
         <h3 class="text-muted"><img src="/images/PP_icon.gif" width="20%"></h3>
-      </header>
+      </header> --> 
 
       
       <!--    Write Your Need Modal Start           -->
@@ -51,11 +48,11 @@
 
     <!--    Write Your Need Modal End          -->
       
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark top-nav" ng-controller="loginCtrl">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+    <a class="navbar-brand" href="/">ForU</a>
      
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
@@ -71,74 +68,27 @@
           <li class="nav-item">
             <a class="nav-link" href="/under-construction">Jobs</a>
           </li>
-
-<!--
-      <li class="nav-item">
-            <a class="nav-link" href="#!/under-construction">Electronics</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Marriages</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#"><img class="d-block w-100" src="../images/Viscient.png" alt="First slide"></a></li>
-              <li><a class="dropdown-item" href="#"> <img class="d-block w-100" src="../images/south-korea.jpg" alt="Second slide"></a></li>
-              <li><a class="dropdown-item" href="#"><img class="d-block w-100" src="../images/sweet-creek.jpg" alt="Third slide"></a></li>
-        <li><a class="dropdown-item" href="#"><img class="d-block w-100" src="../images/sweet-creek.jpg" alt="Third slide"></a></li>
-            </ul>
-          </li>
-      <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Houses</a>
-           <ul class="dropdown-menu">
-              <div>
-         <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-         <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </div>
-        <div>
-         <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-         <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </div>
-        <div>
-         <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-         <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </div>
-            </ul>
-          </li>
-      <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Constructions</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#"><img class="d-block w-100" src="../images/Viscient.png" alt="First slide"></a></li>
-              <li><a class="dropdown-item" href="#"> <img class="d-block w-100" src="../images/south-korea.jpg" alt="Second slide"></a></li>
-              <li><a class="dropdown-item" href="#"><img class="d-block w-100" src="../images/sweet-creek.jpg" alt="Third slide"></a></li>
-              <li><a class="dropdown-item" href="#"><img class="d-block w-100" src="../images/sweet-creek.jpg" alt="Third slide"></a></li>
-            </ul>
-          </li>
-      <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Automotives</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-      <li class="nav-item">
-            <a class="nav-link" href="#!/under-construction">Furniture</a>
-          </li>
-      <li class="nav-item">
-            <a class="nav-link" href="#!/under-construction">Tour's &amp; Travels</a>
-          </li>
-
-        -->
         </ul>
+
+        <ul class="nav nav-pills float-right">
+          <li class="nav-item">
+                  <a class="nav-link" href="/"><i class="fa fa-globe fa-2x" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item" ng-show="message==undefined">
+                  <a class="nav-link" href="/signin-up">SignIn/SignUp</a>
+                </li>
+                <li class="nav-item dropdown" ng-show="message!=undefined">
+                  <a class="nav-link dropdown-toggle top-nav-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{message}}</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item top-nav-user" ng-click="logout();">Logout</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item" ng-show="message==undefined">
+                  <a class="nav-link" data-toggle="modal" data-target="#write_need_modal" href=""><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp;Write <br><span style="font-size:14px;">Your Need</span></a>
+                </li>
+                <li class="nav-item" ng-show="message!=undefined">
+                  <a class="nav-link" href="/write-need"><i class="fa fa-pencil" aria-hidden="true"></i> &nbsp;Write <br><span style="font-size:14px;">Your Need</span></a>
+                </li>
+              </ul>
       </div>
     </nav>
