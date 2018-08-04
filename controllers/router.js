@@ -1,4 +1,4 @@
-angular.module('myApp').config(['$routeProvider', function ($routeProvider) {
+angular.module('myApp').config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
       		$routeProvider
 		        .when('/', {
 		          templateUrl: 'templates/home.html',
@@ -29,5 +29,8 @@ angular.module('myApp').config(['$routeProvider', function ($routeProvider) {
 		        })
 		         .when('/under-construction', {
 		          templateUrl: 'templates/under-construction.html'
-		        });
+						});
+						
+						// use the HTML5 History API
+						$locationProvider.html5Mode(true);
 		    }]);
