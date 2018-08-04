@@ -88,6 +88,33 @@ header h3{
   color:#000;
   background-color: #f97183;
 }
+.signin-up .nav-item {
+  width: 50%;
+}
+.signin-up.nav-tabs {
+  text-align: center;
+}
+.signin-up.nav-tabs .nav-item.show .nav-link, .signin-up.nav-tabs .nav-link.active {
+  color: #000 !important;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+}
+.signin-up.nav-tabs>.nav-item>a {
+  color: #fff !important;
+  cursor: pointer;
+}
+.form-control:focus,.form-control {
+  color: #000;
+}
+#login .form-group,#signup .form-group,.form-check {
+  color: #fff;
+}
+.forgot-pass, .forgot-pass a,.forgot-pass a:hover {
+  color: #fff;
+}
+.forgot-pass a {
+  text-decoration: underline;
+}
 footer{
 	margin: 20px;
     border-top: 1px solid #fff;
