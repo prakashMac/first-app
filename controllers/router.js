@@ -31,6 +31,4 @@ angular.module('myApp').config(['$routeProvider', '$locationProvider', function 
 		          templateUrl: 'templates/under-construction.html'
 						});
 						
-						// use the HTML5 History API
-						$locationProvider.html5Mode(true);
 		    }]);
