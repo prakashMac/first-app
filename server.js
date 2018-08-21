@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-
+var MongoClient=require('mongodb').MongoClient;
+var url='mongodb://capgemini:capgemini@ds255455.mlab.com:55455/mydb';    //connection.connect();
 var app = express();
 
 app.use(bodyParser.json()); // for parsing application/json
@@ -22,12 +23,33 @@ app.use('/styles',  express.static(__dirname + '/styles'));
 app.use('/controllers',  express.static(__dirname + '/controllers'));
 app.use('/templates',  express.static(__dirname + '/templates'));
 app.use('/images',  express.static(__dirname + '/images'));
+//app.use(middleWareFunction);
 
 						/* Main Starting Route  */
 app.get('/',function(req,res){
     res.sendFile('index.html',{'root': __dirname + '/templates'});
 });
+// function middleWareFunction(req,res) {
+//     res.sendFile("index.html", { 'root': __dirname + '/templates'});
+// }
 
+/* Mongo DB */
+
+app.get('/getData',function(req,res){	
+	MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
+	  if (err) throw err;
+	  var dbo = db.db("mydb");
+	  dbo.collection("users").find({}).toArray(function(err, result) {
+	    if (err) throw err;
+	    console.log("Fetching All In the Collection:");
+	    console.log(result);
+	    res.send(result);
+	    db.close();
+	  });
+	});
+});
+
+/** My Sql DB **/
 // app.get('/getData',function(req,res){
 // 	//console.log(req.body);
 //   var selectOutput='SELECT * FROM users';
@@ -66,6 +88,22 @@ app.get('/',function(req,res){
 // 	});
 // });
 
+
+app.get('/getWriteNeed',function(req,res){	
+	MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
+	  if (err) throw err;
+	  var dbo = db.db("mydb");
+	  dbo.collection("writeneed").find({},{ _id: 0, place: 1, need: 1,phone: 0,category: 0, subCategory: 0}).toArray(function(err, result) {
+	    if (err) throw err;
+	    console.log("Fetching All In the Collection:");
+	    console.log(result);
+	    res.send(result);
+	    db.close();
+	  });
+	});
+});
+
+/** My SQL DB **/
 // app.get('/getWriteNeed',function(req,res){
 // 	//console.log(req.body);
 // 	//console.log(req.body.place);
