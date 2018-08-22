@@ -1,20 +1,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var MongoClient=require('mongodb').MongoClient;
-var url='mongodb://capgemini:capgemini@ds255455.mlab.com:55455/mydb';    //connection.connect();
+var url = process.env.MONGOLAB_URI;    //connection.connect();
+
 var app = express();
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: false })); // for parsing application/x-www-form-urlencoded
-
-
-// var mysql = require('mysql');
-// var connection = mysql.createConnection({
-//   host     : 'localhost',
-//   user     : 'root',
-//   password : '12003588',
-//   database : 'PP_Node'
-// });
 
 
 						/* Registering the routes  */
@@ -103,26 +95,10 @@ app.get('/getWriteNeed',function(req,res){
 	});
 });
 
-/** My SQL DB **/
-// app.get('/getWriteNeed',function(req,res){
-// 	//console.log(req.body);
-// 	//console.log(req.body.place);
-// 	var selectWriteNeed='select place, need from writeneed';
-// 	//console.log(insertWriteNeed);
-// 	connection.query(selectWriteNeed, function(err,results){
-// 		if(err){
-// 			console.log(err);
-// 		}
-// 		res.send(results);
-// 		//console.log(results);
-// 	});
-// });
 
 
 						/* Server Running Port  */
-// app.listen(3000,function(){
-//     console.log('Node server running @ http://localhost:3000');
-// });
+
 var port = process.env.PORT || 3000;
 app.listen(port, function(){
 	console.log('listening on', port);
