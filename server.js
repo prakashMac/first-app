@@ -54,17 +54,22 @@ app.get('/getData',function(req,res){
        
 // });
 
-// app.post('/postData',function(req,res){
-// 	//console.log(req.body);
-//  var insertInput='insert into users values("'+req.body.uname+'","'+req.body.password+'","'+req.body.email+'")';
-//  // console.log(selectOutput);
-	 
-// 	connection.query(insertInput, function(err, results) {
-//          res.send(results);
-//        //console.log(results);
-//     });
+
+app.post('/postData',function(req,res){
+	console.log(req.body);
+	MongoClient.connect(url, { useNewUrlParser: true }, function(err, db) {
+		if (err) throw err;
+		var dbo = db.db("mydb");
+		var myobj = { username: req.body.username, password: req.body.password,email: req.body.email };
+		dbo.collection("users").insertOne(myobj, function(err, res) {
+		  if (err) throw err;
+		  console.log("1 document inserted");
+		  app.get('/getData');
+		  db.close();
+		});
+	});
        
-// });
+});
 
 // app.post('/postWriteNeed',function(req,res){
 // 	//console.log(req.body);
